@@ -211,28 +211,28 @@ typedef struct {
 
 // there shouldn't be any problem with increasing these values at the
 // expense of more memory allocation in the utilities
-#define Q3_MAX_MAP_MODELS       0x400
-#define Q3_MAX_MAP_BRUSHES      0x8000
-#define Q3_MAX_MAP_ENTITIES 0x800
-#define Q3_MAX_MAP_ENTSTRING    0x10000
-#define Q3_MAX_MAP_SHADERS      0x400
+#define Q3_MAX_MAP_MODELS       0x4000
+#define Q3_MAX_MAP_BRUSHES      0x80000
+#define Q3_MAX_MAP_ENTITIES     0x8000
+#define Q3_MAX_MAP_ENTSTRING    0x100000
+#define Q3_MAX_MAP_SHADERS      0x4000
 
-#define Q3_MAX_MAP_AREAS        0x100   // MAX_MAP_AREA_BYTES in q_shared must match!
-#define Q3_MAX_MAP_FOGS     0x100
-#define Q3_MAX_MAP_PLANES       0x10000
-#define Q3_MAX_MAP_NODES        0x10000
-#define Q3_MAX_MAP_BRUSHSIDES   0x10000
-#define Q3_MAX_MAP_LEAFS        0x10000
-#define Q3_MAX_MAP_LEAFFACES    0x10000
-#define Q3_MAX_MAP_LEAFBRUSHES  0x10000
-#define Q3_MAX_MAP_PORTALS      0x10000
-#define Q3_MAX_MAP_LIGHTING 0x400000
-#define Q3_MAX_MAP_LIGHTGRID    0x400000
-#define Q3_MAX_MAP_VISIBILITY   0x200000
+#define Q3_MAX_MAP_AREAS        0x1000   // MAX_MAP_AREA_BYTES in q_shared must match!
+#define Q3_MAX_MAP_FOGS         0x1000
+#define Q3_MAX_MAP_PLANES       0x100000
+#define Q3_MAX_MAP_NODES        0x100000
+#define Q3_MAX_MAP_BRUSHSIDES   0x100000
+#define Q3_MAX_MAP_LEAFS        0x100000
+#define Q3_MAX_MAP_LEAFFACES    0x100000
+#define Q3_MAX_MAP_LEAFBRUSHES  0x100000
+#define Q3_MAX_MAP_PORTALS      0x100000
+#define Q3_MAX_MAP_LIGHTING     0x4000000
+#define Q3_MAX_MAP_LIGHTGRID    0x4000000
+#define Q3_MAX_MAP_VISIBILITY   0x2000000
 
-#define Q3_MAX_MAP_DRAW_SURFS   0x20000
-#define Q3_MAX_MAP_DRAW_VERTS   0x80000
-#define Q3_MAX_MAP_DRAW_INDEXES 0x80000
+#define Q3_MAX_MAP_DRAW_SURFS   0x200000
+#define Q3_MAX_MAP_DRAW_VERTS   0x800000
+#define Q3_MAX_MAP_DRAW_INDEXES 0x800000
 
 
 // key / value pair sizes in the entities lump
@@ -255,23 +255,23 @@ typedef struct {
 } q3_lump_t;
 
 #define Q3_LUMP_ENTITIES        0
-#define Q3_LUMP_SHADERS     1
+#define Q3_LUMP_SHADERS         1
 #define Q3_LUMP_PLANES          2
 #define Q3_LUMP_NODES           3
 #define Q3_LUMP_LEAFS           4
 #define Q3_LUMP_LEAFSURFACES    5
-#define Q3_LUMP_LEAFBRUSHES 6
+#define Q3_LUMP_LEAFBRUSHES     6
 #define Q3_LUMP_MODELS          7
-#define Q3_LUMP_BRUSHES     8
+#define Q3_LUMP_BRUSHES         8
 #define Q3_LUMP_BRUSHSIDES      9
 #define Q3_LUMP_DRAWVERTS       10
-#define Q3_LUMP_DRAWINDEXES 11
+#define Q3_LUMP_DRAWINDEXES     11
 #define Q3_LUMP_FOGS            12
 #define Q3_LUMP_SURFACES        13
 #define Q3_LUMP_LIGHTMAPS       14
 #define Q3_LUMP_LIGHTGRID       15
 #define Q3_LUMP_VISIBILITY      16
-#define Q3_HEADER_LUMPS     17
+#define Q3_HEADER_LUMPS         17
 
 typedef struct {
 	int ident;
