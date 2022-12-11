@@ -65,9 +65,9 @@ If you have questions concerning this license or the applicable additional terms
 #define FloatAbs( x )     ( *(float *) &( ( *(int *) &( x ) ) & 0x7FFFFFFF ) )
 #define IntAbs( x )           ( ~( x ) )
 //coordinates
-#define _X      0
-#define _Y      1
-#define _Z      2
+//#define _X      0
+//#define _Y      1
+//#define _Z      2
 
 typedef struct foundfile_s
 {
