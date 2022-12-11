@@ -46,7 +46,6 @@ If you have questions concerning this license or the applicable additional terms
 #endif
 
 #include "qbsp.h"
-#define stricmp strcasecmp
 
 //file extensions with their type
 typedef struct qfile_exttype_s
@@ -83,7 +82,7 @@ int QuakeFileExtensionType( char *extension ) {
 
 	for ( i = 0; quakefiletypes[i].extension; i++ )
 	{
-		if ( !stricmp( extension, quakefiletypes[i].extension ) ) {
+		if ( !Q_stricmp( extension, quakefiletypes[i].extension ) ) {
 			return quakefiletypes[i].type;
 		} //end if
 	} //end for

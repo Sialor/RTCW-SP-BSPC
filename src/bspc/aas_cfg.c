@@ -44,13 +44,6 @@ If you have questions concerning this license or the applicable additional terms
 #include "../botlib/l_struct.h"
 #include "../botlib/l_libvar.h"
 
-// TTimo: this is a f*g mess
-// I got rid of all occurences except for bspc it seems
-// all code *should* be using Q_stricmp
-#ifdef BSPC
-#define stricmp strcasecmp
-#endif
-
 ///////////////////////////////////
 extern void LibVarSet( char *var_name, char *value );
 ///////////////////////////////////
@@ -282,7 +275,7 @@ int LoadCfgFile( char *filename ) {
 
 	while ( PC_ReadToken( source, &token ) )
 	{
-		if ( !stricmp( token.string, "bbox" ) ) {
+		if ( !Q_stricmp( token.string, "bbox" ) ) {
 			if ( cfg.numbboxes >= AAS_MAX_BBOXES ) {
 				SourceError( source, "too many bounding box volumes defined" );
 			} //end if
@@ -293,7 +286,7 @@ int LoadCfgFile( char *filename ) {
 			cfg.allpresencetypes |= cfg.bboxes[cfg.numbboxes].presencetype;
 			cfg.numbboxes++;
 		} //end if
-		else if ( !stricmp( token.string, "settings" ) ) {
+		else if ( !Q_stricmp( token.string, "settings" ) ) {
 			if ( settingsdefined ) {
 				SourceWarning( source, "settings already defined\n" );
 			} //end if

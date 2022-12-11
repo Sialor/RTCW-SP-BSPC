@@ -46,9 +46,6 @@ If you have questions concerning this license or the applicable additional terms
 #include "aas_store.h"       //AAS_MAX_BBOXES
 #include "aas_cfg.h"
 
-// TTimo: messy...
-#define stricmp strcasecmp
-
 #define Sign( x )     ( x < 0 ? 1 : 0 )
 
 int nummapbrushes;
@@ -1074,7 +1071,7 @@ qboolean WriteMapFileSafe( FILE *fp ) {
 		}
 		//
 		if ( loadedmaptype == MAPTYPE_QUAKE3 ) {
-			if ( !stricmp( ValueForKey( mapent, "classname" ), "light" ) ) {
+			if ( !Q_stricmp( ValueForKey( mapent, "classname" ), "light" ) ) {
 				SetKeyValue( mapent, "light", "10000" );
 			} //end if
 		} //end if

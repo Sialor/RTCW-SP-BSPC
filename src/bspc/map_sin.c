@@ -485,7 +485,7 @@ qboolean	Sin_ParseMapEntity (void)
 #ifdef SIN
 		 //HACK HACK HACK
 		 // MED Gotta do this here
-		 if ( !stricmp(e->key, "surfacefile") )
+		 if ( !Q_stricmp(e->key, "surfacefile") )
 			{
 			if (!surfacefile[0])
 			   {
