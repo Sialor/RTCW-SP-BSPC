@@ -35,7 +35,10 @@ If you have questions concerning this license or the applicable additional terms
 // Tab Size:     3
 //===========================================================================
 
+#ifdef __linux__
 #include <unistd.h>
+#endif
+
 //#ifndef BOTLIB
 //#define BOTLIB
 //#endif //BOTLIB

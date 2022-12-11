@@ -431,6 +431,7 @@ void CreateAASFilesForAllBSPFiles( char *quakepath ) {
 #if defined( WIN32 ) | defined( _WIN32 )
 	WIN32_FIND_DATA filedata;
 	HWND handle;
+	int done = 0;
 	struct _stat statbuf;
 #else
 	glob_t globbuf;
